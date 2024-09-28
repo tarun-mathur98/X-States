@@ -103,14 +103,15 @@ const XStates = () => {
           ))}
         </select>
       </div>
-      {selectCity && (
-        <h2>
-          You selected <span style={{ fontSize: 24 }}>{selectCity}</span>,
+      {selectCity ? (
+        <p>
+          You selected: <span style={{ fontSize: 20 }}>{selectCity}</span>,{" "}
           <span style={{ color: "grey" }}>
-            {" "}
             {selectState}, {selectCountry}
           </span>
-        </h2>
+        </p>
+      ) : (
+        <></>
       )}
     </div>
   );
