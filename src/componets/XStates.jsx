@@ -77,7 +77,11 @@ const XStates = () => {
           ))}
         </select>
         &ensp;
-        <select value={selectState} onChange={handleStateChange} disabled={!selectCountry}>
+        <select
+          value={selectState}
+          onChange={handleStateChange}
+          disabled={!selectCountry}
+        >
           <option value="">Select State</option>
           {states.map((state) => (
             <option key={state} value={state}>
@@ -86,7 +90,11 @@ const XStates = () => {
           ))}
         </select>
         &ensp;
-        <select value={selectCity} onChange={handleCityChange}  disabled={!selectState}>
+        <select
+          value={selectCity}
+          onChange={handleCityChange}
+          disabled={!selectState}
+        >
           <option value="">Select City</option>
           {cities.map((city) => (
             <option key={city} value={city}>
@@ -95,17 +103,14 @@ const XStates = () => {
           ))}
         </select>
       </div>
-      {selectCity ? (
-        <span>
-          <b>
-            You selected <span style={{ fontSize: 20 }}>{selectCity}</span>,{" "}
-            <span style={{ color: "grey" }}>
-              {selectState}, {selectCountry}
-            </span>
-          </b>
-        </span>
-      ) : (
-        <></>
+      {selectCity && (
+        <h2>
+          You selected <span style={{ fontSize: 24 }}>{selectCity}</span>,
+          <span style={{ color: "grey" }}>
+            {" "}
+            {selectState}, {selectCountry}
+          </span>
+        </h2>
       )}
     </div>
   );
