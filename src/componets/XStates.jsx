@@ -98,7 +98,7 @@ const XStates = () => {
       {selectCity ? (
         <p>
           <b>
-            You selected: <span style={{ fontSize: 20 }}>{selectCity}</span>,{" "}
+            You selected <span style={{ fontSize: 20 }}>{selectCity}</span>,{" "}
             <span style={{ color: "grey" }}>
               {selectState}, {selectCountry}
             </span>
