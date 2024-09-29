@@ -113,7 +113,7 @@ const App = () => {
 
       {selectedCity ? (
         <p>
-          <b>You selected: {selectedCity}</b>, {selectedState},{" "}
+          <b>You selected {selectedCity}</b>, {selectedState},{" "}
           {selectedCountry}
         </p>
       ) : (
