@@ -112,10 +112,9 @@ const App = () => {
       </div>
 
       {selectedCity ? (
-        <p>
-          <b>You selected {selectedCity}</b>, {selectedState},{" "}
-          {selectedCountry}
-        </p>
+        <span>
+          <b>You selected {selectedCity}</b>, {selectedState}, {selectedCountry}
+        </span>
       ) : (
         <></>
       )}
